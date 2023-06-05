@@ -81,13 +81,19 @@ public class Main {
     }
 
     public static void task7() {
-        float min = 7 / 0.250f;
-        float max = 7 / 0.500f;
-        System.out.println(" при условии потери 250 грам в день, 7 кг уйдет за " + min + " дней");
-        System.out.println(" при условии потери 500 грам в день, 7 кг уйдет за " + max + " дней");
+        int massa = 7000;
+        int min = 250;
+        int max = 500;
+        double weightLossMin = (double) massa / min;
+        double weightLossMax = (double) massa / max;
+        double weightLossPerDeyAverage = (weightLossMin + weightLossMax) / 2D;
+
+        System.out.println(" при условии потери 250 грам в день, 7 кг уйдет за " + weightLossMin + " дней");
+        System.out.println(" при условии потери 500 грам в день, 7 кг уйдет за " + weightLossMax + " дней");
+        System.out.println(" средне количество " + weightLossPerDeyAverage + " дней" );
     }
 
-    public static void task8() {
+        public static void task8() {
         int masha = 67760; //доход
         int denis = 83690;
         int kristina = 76230;
@@ -98,13 +104,13 @@ public class Main {
         int denisRaise = denis + denis * 10 / 100;
         int kristinaRaise = kristina + kristina * 10 / 100;
         int mashaYearRaise = mashaRaise * 12; // доход за год с повышением
-        int denisYearRaise = denisRaise *12;
+        int denisYearRaise = denisRaise * 12;
         int kristinaYearRaise = kristinaRaise * 12;
         int mashaDifference = mashaYearRaise - mashaGod;
         int denisDifference = denisYearRaise - denisGod;
         int kristinaDifference = kristinaYearRaise - kristinaGod;
-        System.out.println("Маша теперь получает " + mashaRaise + " рублей. Годовой доход вырос на " +mashaDifference+ " рублей");
-        System.out.println("Денис теперь получает " + denisRaise + " рублей. Годовой доход вырос на " +denisDifference+ " рублей");
-        System.out.println("Маша теперь получает " + kristinaRaise + " рублей. Годовой доход вырос на " +kristinaDifference+ " рублей");
+        System.out.println("Маша теперь получает " + mashaRaise + " рублей. Годовой доход вырос на " + mashaDifference + " рублей");
+        System.out.println("Денис теперь получает " + denisRaise + " рублей. Годовой доход вырос на " + denisDifference + " рублей");
+        System.out.println("Маша теперь получает " + kristinaRaise + " рублей. Годовой доход вырос на " + kristinaDifference + " рублей");
     }
 }
